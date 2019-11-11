@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "タイトル"; ObjectID = "OWZ-bn-i3d"; */
+"OWZ-bn-i3d.text" = "タイトル";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Q3I-j2-yad"; */
+"Q3I-j2-yad.text" = "Title";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "bGA-1w-C40"; */
+"bGA-1w-C40.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "fXv-uF-ebf"; */
+"fXv-uF-ebf.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "内容"; ObjectID = "gMm-6C-o3q"; */
+"gMm-6C-o3q.text" = "内容";

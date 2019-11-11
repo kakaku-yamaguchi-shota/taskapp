@@ -7,16 +7,41 @@
 //
 
 import UIKit
+import UserNotifications
+import RealmSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization
+        }
+        center.delegate = self
+
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                // Personオブジェクトを列挙します
+                migration.enumerateObjects(ofType: Task.className()) { oldObject, newObject in
+                    // スキーマバージョンが0のときだけ、'category'プロパティを追加します
+                    if oldSchemaVersion < 1 {
+                        newObject!["category"] = ""
+                    }
+                }
+        })
+
         return true
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .alert])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
